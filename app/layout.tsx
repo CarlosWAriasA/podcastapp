@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ConvexClerkProvider from "@/app/providers/ConvexClerkProvider";
 
 export const metadata: Metadata = {
   title: "Your Podcast",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ConvexClerkProvider>{children}</ConvexClerkProvider>
+      </body>
     </html>
   );
 }
